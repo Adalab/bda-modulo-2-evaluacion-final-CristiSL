@@ -1,3 +1,5 @@
+-- EJERCICIO 1: CONSULTAS SOBRE LA BASE DE DATOS pelis
+
 USE pelis;
 
 -- ¿Cuántas películas tienen una duración superior a 120 minutos?
