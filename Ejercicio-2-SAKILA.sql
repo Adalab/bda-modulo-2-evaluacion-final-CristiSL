@@ -55,6 +55,8 @@ FROM customer c
 INNER JOIN rental r ON c.customer_id = r.customer_id
 GROUP BY c.customer_id
 ORDER BY amount_rentals_per_client DESC;
+-- first_name y last_name están en la tabla customers, rental_id está en rental y el dato que tienen en común ambas tablas es customer_id
+
 
 -- 11. Encuentra la cantidad total de películas alquiladas por categoría y muestra el nombre de la categoría junto con el recuento de alquileres.
 SELECT c.name AS category, COUNT(r.rental_id) AS total_rentals_per_category
@@ -65,6 +67,14 @@ INNER JOIN film_category fc ON f.film_id = fc.film_id
 INNER JOIN category c ON fc.category_id = c.category_id
 GROUP BY c.name
 ORDER BY total_rentals_per_category DESC;
+-- Empiezo por la tabla rental porque es la que tiene los alquileres, que es lo que queremos contar.
+-- Uno rental con inventory porque tienen en común el dato inventory_id, que me dice qué copia de película se alquiló.
+-- Uno inventory con film porque tienen en común el dato film_id, que me dice a qué película corresponde esa copia.
+-- Uno film con film_category porque es la tabla intermedia entre film y category.
+-- Uno film_category con category para conseguir el nombre de la categoría de cada peli.
+-- Agrupo por categoría para que me cuente los alquileres de cada categoría por separado.
+-- Ordeno de mayor a menor por limpieza a la hora de mostrar los datos.
+
 
 -- 12. Encuentra el promedio de duración de las películas para cada clasificación de la tabla film y muestra la clasificación junto con el promedio de duración.
 SELECT rating, ROUND(AVG(length), 0) AS average_length
