@@ -18,8 +18,9 @@ Proyecto de extracción, almacenamiento y consulta de datos de películas usando
 
 ### Requisitos previos
 
-- Python 3.x instalado
-- MySQL instalado y en ejecución
+- Python 3.x instalado.
+- MySQL instalado y en ejecución.
+- Clonar este repositorio.
 - Ejecutar lo siguiente para instalar todas las librerías necesarias:
 
 ```bash
@@ -45,11 +46,11 @@ sakila_data.sql
 
 Abre `Ejercicio-1-Python.ipynb` y ejecuta las celdas en orden:
 
-1. **Imports** — carga las librerías necesarias
-2. **Extracción** — obtiene 100 películas desde la API
-3. **Creación de la BD** — crea la base de datos `pelis` y su tabla en MySQL
-4. **Inserción** — inserta los datos en la tabla
-5. **Consultas** — responde las preguntas con queries SQL
+1. **Imports** — carga las librerías necesarias.
+2. **Extracción** — obtiene 100 películas desde la API.
+3. **Creación de la BD** — crea la base de datos `pelis` y su tabla en MySQL.
+4. **Inserción** — inserta los datos en la tabla.
+5. **Consultas** — responde las preguntas con queries SQL.
 
 ### 4. Ejecutar los Ejercicios SQL
 
